@@ -306,7 +306,7 @@
         "named": true
       },
       {
-        "type": "string",
+        "type": "str",
         "named": true
       },
       {
@@ -507,7 +507,7 @@
           }
         ]
       },
-      "object": {
+      "obj": {
         "multiple": false,
         "required": true,
         "types": [
@@ -928,7 +928,7 @@
           "named": true
         },
         {
-          "type": "string",
+          "type": "str",
           "named": true
         },
         {
@@ -1120,7 +1120,7 @@
       "required": true,
       "types": [
         {
-          "type": "string",
+          "type": "str",
           "named": true
         }
       ]
@@ -1316,7 +1316,7 @@
             "named": true
           },
           {
-            "type": "string",
+            "type": "str",
             "named": true
           },
           {
@@ -1550,7 +1550,7 @@
             "named": true
           },
           {
-            "type": "string",
+            "type": "str",
             "named": true
           }
         ]
@@ -2170,7 +2170,7 @@
           "named": true
         },
         {
-          "type": "string",
+          "type": "str",
           "named": true
         },
         {
@@ -2790,7 +2790,7 @@
     }
   },
   {
-    "type": "string",
+    "type": "str",
     "named": true,
     "fields": {},
     "children": {
@@ -3171,7 +3171,7 @@
           "named": true
         },
         {
-          "type": "string",
+          "type": "str",
           "named": true
         },
         {

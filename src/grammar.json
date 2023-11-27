@@ -1807,7 +1807,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "string"
+                "name": "str"
               },
               {
                 "type": "SYMBOL",
@@ -2379,7 +2379,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "string"
+            "name": "str"
           },
           {
             "type": "SYMBOL",
@@ -3352,7 +3352,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "string"
+          "name": "str"
         },
         {
           "type": "SYMBOL",
@@ -4500,7 +4500,7 @@
         "members": [
           {
             "type": "FIELD",
-            "name": "object",
+            "name": "obj",
             "content": {
               "type": "SYMBOL",
               "name": "primary_expression"
@@ -5436,18 +5436,18 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "string"
+          "name": "str"
         },
         {
           "type": "REPEAT1",
           "content": {
             "type": "SYMBOL",
-            "name": "string"
+            "name": "str"
           }
         }
       ]
     },
-    "string": {
+    "str": {
       "type": "SEQ",
       "members": [
         {

@@ -130,7 +130,7 @@ B"sup"
 "\\"
 "/"
 "multiline \
-string"
+str"
 b"\x12\u12\U12\x13\N{WINKING FACE}"
 "\xab\123\'\"\a\b\f\r\n\t\v\\"
 "\xgh\o123\p\q\c\d\e\u12\U1234"
@@ -140,61 +140,61 @@ f'\N{GREEK CAPITAL LETTER DELTA}'
 
 (module
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence)
         (escape_sequence))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence)
@@ -211,12 +211,12 @@ f'\N{GREEK CAPITAL LETTER DELTA}'
         (escape_sequence))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence))
@@ -233,7 +233,7 @@ Raw strings
 r'ab\x00cd'
 ur"\n"
 
-# raw f-string
+# raw f-str
 fr"\{0}"
 
 r"\\"
@@ -245,42 +245,42 @@ fg"'
 
 (module
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence))
       (string_end)))
   (comment)
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (comment)
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (interpolation
         (integer))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end))))
@@ -302,11 +302,11 @@ re.compile(r"(\n|\A)#include\s*['\"]"
         (identifier))
       (argument_list
         (concatenated_string
-          (string
+          (str
             (string_start)
             (string_content)
             (string_end))
-          (string
+          (str
             (string_start)
             (string_content)
             (string_end)))))))
@@ -343,14 +343,14 @@ def test(self):
 (module
   (comment)
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (interpolation
         (call
           (identifier)
           (argument_list
-            (string
+            (str
               (string_start)
               (string_content)
               (interpolation
@@ -360,7 +360,7 @@ def test(self):
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (interpolation
@@ -368,7 +368,7 @@ def test(self):
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (interpolation
@@ -376,14 +376,14 @@ def test(self):
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_interpolation)
         (escape_interpolation))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (interpolation
@@ -392,7 +392,7 @@ def test(self):
         (escape_interpolation))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_interpolation))
@@ -400,14 +400,14 @@ def test(self):
         (identifier))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_interpolation)
         (escape_interpolation))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_interpolation))
@@ -417,21 +417,21 @@ def test(self):
         (escape_interpolation))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (expression_list
           (identifier)))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (yield
           (identifier)))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (expression_list
@@ -443,17 +443,17 @@ def test(self):
     (parameters)
     (block
       (return_statement
-        (string
+        (str
           (string_start)
           (string_content)
           (interpolation
             (conditional_expression
-              (string
+              (str
                 (string_start)
                 (string_content)
                 (string_end))
               (true)
-              (string
+              (str
                 (string_start)
                 (string_content)
                 (string_end))))
@@ -469,14 +469,14 @@ def test(self):
             (identifier)
             (identifier))
           (argument_list
-            (string
+            (str
               (string_start)
               (string_content)
               (interpolation
                 (integer)
                 (comment))
               (string_end))
-            (string
+            (str
               (string_start)
               (string_content)
               (string_end))))))))
@@ -496,7 +496,7 @@ f"{value:{width + padding!r}.{precision}}"
 
 (module
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (interpolation
@@ -508,7 +508,7 @@ f"{value:{width + padding!r}.{precision}}"
         (format_specifier))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (identifier)
@@ -523,27 +523,27 @@ f"{value:{width + padding!r}.{precision}}"
               (identifier)))))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (identifier)
         (format_specifier))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (identifier))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (identifier)
         (format_specifier))
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (interpolation
         (identifier)
@@ -567,7 +567,7 @@ Unicode escape sequences
 
 (module
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence)
@@ -604,15 +604,15 @@ Concatenated strings
 (module
   (expression_statement
     (concatenated_string
-      (string
+      (str
         (string_start)
         (string_content)
         (string_end))
-      (string
+      (str
         (string_start)
         (string_content)
         (string_end))
-      (string
+      (str
         (string_start)
         (string_content)
         (string_end)))))
@@ -661,37 +661,37 @@ and another escaped newline\n\
 
 (module
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (expression_statement
-    (string
+    (str
       (string_start)
       (string_content
         (escape_sequence)

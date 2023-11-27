@@ -165,11 +165,11 @@ print >> a, "b", "c"
   (print_statement
     (chevron
       (identifier))
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end))
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end))))
@@ -616,7 +616,7 @@ with e as f, g as h,:
           (call
             (identifier)
             (argument_list
-              (string
+              (str
                 (string_start)
                 (string_content)
                 (string_end))))
@@ -627,7 +627,7 @@ with e as f, g as h,:
           (call
             (identifier)
             (argument_list
-              (string
+              (str
                 (string_start)
                 (string_content)
                 (string_end))))
@@ -724,7 +724,7 @@ async def d(a:str="default", b=c) -> None:
         (identifier)
         type: (type
           (attribute
-            object: (identifier)
+            obj: (identifier)
             attribute: (identifier)))))
     body: (block
       (expression_statement
@@ -778,7 +778,7 @@ async def d(a:str="default", b=c) -> None:
         name: (identifier)
         type: (type
           (identifier))
-        value: (string
+        value: (str
           (string_start)
           (string_content)
           (string_end)))
@@ -1130,7 +1130,7 @@ raise RunTimeError('NO') from e
     (call
       (identifier)
       (argument_list
-        (string
+        (str
           (string_start)
           (string_content)
           (string_end)))))
@@ -1138,7 +1138,7 @@ raise RunTimeError('NO') from e
     (call
       (identifier)
       (argument_list
-        (string
+        (str
           (string_start)
           (string_content)
           (string_end))))
@@ -1277,7 +1277,7 @@ print "a"
 
 (module
   (print_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
@@ -1313,18 +1313,18 @@ exec func in {}
 
 (module
   (exec_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end)))
   (exec_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end))
     (none))
   (exec_statement
-    (string
+    (str
       (string_start)
       (string_content)
       (string_end))
@@ -1333,7 +1333,7 @@ exec func in {}
   (expression_statement
     (assignment
       (identifier)
-      (string
+      (str
         (string_start)
         (string_content)
         (string_end))))
@@ -1404,7 +1404,7 @@ or len("aa")
       (call
         (identifier)
         (argument_list
-          (string
+          (str
             (string_start)
             (string_content)
             (string_end))))
@@ -1412,7 +1412,7 @@ or len("aa")
       (call
         (identifier)
         (argument_list
-          (string
+          (str
             (string_start)
             (string_content)
             (string_end)))))))

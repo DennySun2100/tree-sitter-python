@@ -309,7 +309,7 @@ exec("""exec _code_ in _globs_, _locs_""")
     (call
       (identifier)
       (argument_list
-        (string
+        (str
           (string_start)
           (string_content
             (escape_sequence)
@@ -317,7 +317,7 @@ exec("""exec _code_ in _globs_, _locs_""")
           (string_end))
         (dictionary
           (pair
-            (string
+            (str
               (string_start)
               (string_content)
               (string_end))
@@ -327,7 +327,7 @@ exec("""exec _code_ in _globs_, _locs_""")
     (call
       (identifier)
       (argument_list
-        (string
+        (str
           (string_start)
           (string_content)
           (string_end))))))
@@ -510,8 +510,8 @@ a() + b[c] * c.d.e
           value: (identifier)
           subscript: (identifier))
         right: (attribute
-          object: (attribute
-            object: (identifier)
+          obj: (attribute
+            obj: (identifier)
             attribute: (identifier))
           attribute: (identifier))))))
 
@@ -802,7 +802,7 @@ foo(x := 3, cat='vector')
           (integer))
         (keyword_argument
           (identifier)
-          (string
+          (str
             (string_start)
             (string_content)
             (string_end))))))
@@ -884,7 +884,7 @@ lambda (a, b): (a, b)
         (identifier)
         (argument_list
           (binary_operator
-            (string
+            (str
               (string_start)
               (string_content)
               (string_end))

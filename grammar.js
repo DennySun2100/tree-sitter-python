@@ -452,7 +452,7 @@ module.exports = grammar({
 
     exec_statement: $ => seq(
       'exec',
-      field('code', choice($.string, $.identifier)),
+      field('code', choice($.str, $.identifier)),
       optional(
         seq(
           'in',
@@ -562,7 +562,7 @@ module.exports = grammar({
       alias($._list_pattern, $.list_pattern),
       alias($._tuple_pattern, $.tuple_pattern),
       $.dict_pattern,
-      $.string,
+      $.str,
       $.concatenated_string,
       $.true,
       $.false,
@@ -732,7 +732,7 @@ module.exports = grammar({
       $.binary_operator,
       $.identifier,
       $.keyword_identifier,
-      $.string,
+      $.str,
       $.concatenated_string,
       $.integer,
       $.float,
@@ -898,7 +898,7 @@ module.exports = grammar({
     )),
 
     attribute: $ => prec(PREC.call, seq(
-      field('object', $.primary_expression),
+      field('obj', $.primary_expression),
       '.',
       field('attribute', $.identifier),
     )),
@@ -1063,11 +1063,11 @@ module.exports = grammar({
     )),
 
     concatenated_string: $ => seq(
-      $.string,
-      repeat1($.string),
+      $.str,
+      repeat1($.str),
     ),
 
-    string: $ => seq(
+    str: $ => seq(
       $.string_start,
       repeat(choice($.interpolation, $.string_content)),
       $.string_end,
