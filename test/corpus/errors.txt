@@ -22,7 +22,7 @@ def a(b):
       (identifier))
     (block
       (expression_statement
-        (str
+        (string
           (string_start)
           (string_content)
           (string_end)))
