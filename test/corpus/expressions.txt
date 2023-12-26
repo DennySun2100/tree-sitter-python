@@ -400,6 +400,7 @@ Math operators
 ================================================================================
 
 a + b * c ** d - e / 5
+a // 2
 -5
 +x
 ~x
@@ -419,6 +420,10 @@ a + b * c ** d - e / 5
       (binary_operator
         (identifier)
         (integer))))
+  (expression_statement
+    (binary_operator
+      (identifier)
+      (integer)))
   (expression_statement
     (unary_operator
       (integer)))
@@ -519,7 +524,7 @@ a() + b[c] * c.d.e
 Bitwise operators
 ================================================================================
 
-a << b | c >> d & e
+a << b | c >> d & e ^ f
 
 --------------------------------------------------------------------------------
 
@@ -533,7 +538,9 @@ a << b | c >> d & e
         (binary_operator
           (identifier)
           (identifier))
-        (identifier)))))
+        (binary_operator
+          (identifier)
+          (identifier))))))
 
 ================================================================================
 Boolean operators
@@ -579,6 +586,8 @@ a < b <= c == d >= e > f
 not a == b or c == d
 a not in b
 a is not b
+a is b and c != d
+a <> b
 
 --------------------------------------------------------------------------------
 
@@ -604,6 +613,18 @@ a is not b
     (comparison_operator
       (identifier)
       (identifier)))
+  (expression_statement
+    (comparison_operator
+      (identifier)
+      (identifier)))
+  (expression_statement
+    (boolean_operator
+      (comparison_operator
+        (identifier)
+        (identifier))
+      (comparison_operator
+        (identifier)
+        (identifier))))
   (expression_statement
     (comparison_operator
       (identifier)
